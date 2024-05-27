@@ -1,0 +1,52 @@
+baseURL: https://blog.myz97.com/
+languageCode: zh-cn
+title: xuziye0327's blog
+theme: ["PaperMod"]
+
+enableRobotsTXT: true
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: xuziye0327's blog
+  description: "xuziye0327's blog"
+  keywords: [Blog]
+  author: xuziye0327
+
+  homeInfoParams:
+    Title: xuziye0327
+    Content: Welcome to here!
+
+  socialIcons: # optional
+    - name: github
+      url: https://github.com/xuziye0327
+
+  # author: ["Me", "You"] # multiple authors
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  # ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: true
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+
+menu:
+  main:
+    - identifier: tags
+      name: tags
+      url: /tags/
+      weight: 0
