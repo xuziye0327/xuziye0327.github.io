@@ -36,3 +36,12 @@ def reproducibility(seed: int = 8848):
     torch.manual_seed(seed)
     torch.cuda.manual_seed(seed)
 ```
+
+## 初始化权重
+
+``` py
+def init_weights(m: nn.Module):
+    if isinstance(m, nn.Linear):
+        torch.nn.init.xavier_uniform_(m.weight)
+        m.bias.data.fill_(0.01)
+```
