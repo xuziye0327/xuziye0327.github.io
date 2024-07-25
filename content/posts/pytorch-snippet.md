@@ -4,7 +4,7 @@ date = 2024-05-28T00:26:21+08:00
 weight = 1
 # draft = true
 tags = ["pytorch"]
-# author = ["Me", "You"] # multiple authors
+author = ["Me"] # multiple authors
 showtoc = true
 tocopen = true
 +++
@@ -40,8 +40,10 @@ def reproducibility(seed: int = 8848):
 ## 初始化权重
 
 ``` py
-def init_weights(m: nn.Module):
-    if isinstance(m, nn.Linear):
-        torch.nn.init.xavier_uniform_(m.weight)
-        m.bias.data.fill_(0.01)
+def init_params(model):
+    for p in model.parameters():
+        if p.dim() > 1:
+            nn.init.xavier_normal_(p)
+        else:
+            nn.init.normal_(p)
 ```
